@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife — Gym Hareketleri & Beslenme Önerileri</title>
+    <meta name="description"
+        content="Kas gruplarına göre egzersiz hareketleri ve bulk, cut, sağlıklı beslenme önerileri. Fitness hedeflerine ulaşmak için profesyonel rehber.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <header id="site-header">
+        <nav>
+            <a href="#" class="logo">Fit<span>Life</span></a>
+            <ul class="nav-links">
+                <li><a href="#hareketler">Hareketler</a></li>
+                <li><a href="#beslenme">Beslenme</a></li>
+                <li><a href="#gunluk-plan">Günlük Plan</a></li>
+                <li><a href="#hakkimizda">Hakkımızda</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menüyü aç">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========== HERO ========== -->
+        <section class="hero" id="hero">
+            <div class="hero-glow"></div>
+            <div class="hero-content fade-in">
+                <p class="hero-tag">💪 Fitness & Beslenme Rehberin</p>
+                <h1>Hedefine Ulaşmak<br>İçin <span class="highlight">Doğru Adımlar</span></h1>
+                <p class="hero-desc">Kas gruplarına özel egzersizler, bilimsel beslenme önerileri ve günlük diyet
+                    planlarıyla fitness yolculuğuna başla.</p>
+                <div class="hero-buttons">
+                    <a href="#hareketler" class="btn btn-primary">Hareketleri Keşfet</a>
+                    <a href="#beslenme" class="btn btn-outline">Beslenme Planı</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Egzersiz</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Besin</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Diyet Planı</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== KAS GRUPLARI ========== -->
+        <section id="hareketler" class="section-container">
+            <div class="section-header fade-in">
+                <h2>Kas Grupları</h2>
+                <p class="section-desc">Çalışmak istediğin kas grubunu seç, o gruba özel hareketleri keşfet.</p>
+            </div>
+            <div class="muscle-groups fade-in">
+                <button class="muscle-btn active" data-group="all">
+                    <span class="muscle-icon">🏋️</span>
+                    <span>Tümü</span>
+                </button>
+                <button class="muscle-btn" data-group="gogus">
+                    <span class="muscle-icon">🫁</span>
+                    <span>Göğüs</span>
+                </button>
+                <button class="muscle-btn" data-group="sirt">
+                    <span class="muscle-icon">🔙</span>
+                    <span>Sırt</span>
+                </button>
+                <button class="muscle-btn" data-group="omuz">
+                    <span class="muscle-icon">💪</span>
+                    <span>Omuz</span>
+                </button>
+                <button class="muscle-btn" data-group="bacak">
+                    <span class="muscle-icon">🦵</span>
+                    <span>Bacak</span>
+                </button>
+                <button class="muscle-btn" data-group="kol">
+                    <span class="muscle-icon">💪</span>
+                    <span>Kol</span>
+                </button>
+                <button class="muscle-btn" data-group="karin">
+                    <span class="muscle-icon">🧘</span>
+                    <span>Karın</span>
+                </button>
+            </div>
+
+            <!-- Egzersiz Kartları -->
+            <div class="exercise-grid fade-in" id="exercise-grid">
+                <!-- GÖĞÜS -->
+                <div class="exercise-card" data-group="gogus">
+                    <div class="card-badge">Göğüs</div>
+                    <h3>Bench Press (Düz)</h3>
+                    <p>Göğüs kaslarının temel bileşik hareketi. Düz bankta barbell veya dumbbell ile yapılır.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>4</strong> Set</span>
+                        <span class="meta-item"><strong>8-12</strong> Tekrar</span>
+                        <span class="difficulty medium">Orta</span>
+                    </div>
+                </div>
+                <div class="exercise-card" data-group="gogus">
+                    <div class="card-badge">Göğüs</div>
+                    <h3>İncline Dumbbell Press</h3>
+                    <p>Üst göğüs kaslarını hedefler. 30-45 derece eğimli bankta dumbbell ile yapılır.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>4</strong> Set</span>
+                        <span class="meta-item"><strong>10-12</strong> Tekrar</span>
+                        <span class="difficulty medium">Orta</span>
+                    </div>
+                </div>
+                <div class="exercise-card" data-group="gogus">
+                    <div class="card-badge">Göğüs</div>
+                    <h3>Cable Fly (Kablo Açma)</h3>
+                    <p>Göğüs kaslarını izole eder. Kablo makinesi ile kontrollü bir şekilde yapılır.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>3</strong> Set</span>
+                        <span class="meta-item"><strong>12-15</strong> Tekrar</span>
+                        <span class="difficulty easy">Kolay</span>
+                    </div>
+                </div>
+                <div class="exercise-card" data-group="gogus">
+                    <div class="card-badge">Göğüs</div>
+                    <h3>Dips (Paralel Bar)</h3>
+                    <p>Alt göğüs ve triceps için mükemmel bir bileşik hareket. Vücut ağırlığıyla yapılır.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>3</strong> Set</span>
+                        <span class="meta-item"><strong>8-12</strong> Tekrar</span>
+                        <span class="difficulty hard">Zor</span>
+                    </div>
+                </div>
+
+                <!-- SIRT -->
+                <div class="exercise-card" data-group="sirt">
+                    <div class="card-badge">Sırt</div>
+                    <h3>Deadlift</h3>
+                    <p>Tüm vücudu çalıştıran en etkili bileşik hareket. Sırt, bacak ve core kaslarını hedefler.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>4</strong> Set</span>
+                        <span class="meta-item"><strong>5-8</strong> Tekrar</span>
+                        <span class="difficulty hard">Zor</span>
+                    </div>
+                </div>
+                <div class="exercise-card" data-group="sirt">
+                    <div class="card-badge">Sırt</div>
+                    <h3>Barbell Row</h3>
+                    <p>Sırt kalınlığını artıran temel hareket. Öne eğilerek barbell ile çekiş yapılır.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>4</strong> Set</span>
+                        <span class="meta-item"><strong>8-10</strong> Tekrar</span>
+                        <span class="difficulty medium">Orta</span>
+                    </div>
+                </div>
+                <div class="exercise-card" data-group="sirt">
+                    <div class="card-badge">Sırt</div>
+                    <h3>Lat Pulldown</h3>
+                    <p>Sırt genişliğini hedefleyen kablo hareketi. Geniş tutuşla latleri çalıştırır.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>4</strong> Set</span>
+                        <span class="meta-item"><strong>10-12</strong> Tekrar</span>
+                        <span class="difficulty easy">Kolay</span>
+                    </div>
+                </div>
+                <div class="exercise-card" data-group="sirt">
+                    <div class="card-badge">Sırt</div>
+                    <h3>Pull-Up (Barfiks)</h3>
+                    <p>Üst sırt ve lats için en etkili vücut ağırlığı hareketi. Geniş tutuşla yapılır.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>4</strong> Set</span>
+                        <span class="meta-item"><strong>6-10</strong> Tekrar</span>
+                        <span class="difficulty hard">Zor</span>
+                    </div>
+                </div>
+
+                <!-- OMUZ -->
+                <div class="exercise-card" data-group="omuz">
+                    <div class="card-badge">Omuz</div>
+                    <h3>Overhead Press</h3>
+                    <p>Omuz kaslarının temel bileşik hareketi. Ayakta barbell veya dumbbell ile yapılır.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>4</strong> Set</span>
+                        <span class="meta-item"><strong>8-10</strong> Tekrar</span>
+                        <span class="difficulty medium">Orta</span>
+                    </div>
+                </div>
+                <div class="exercise-card" data-group="omuz">
+                    <div class="card-badge">Omuz</div>
+                    <h3>Lateral Raise</h3>
+                    <p>Yan omuz kaslarını izole eder. Dumbbell ile yanlara açma hareketi yapılır.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>4</strong> Set</span>
+                        <span class="meta-item"><strong>12-15</strong> Tekrar</span>
+                        <span class="difficulty easy">Kolay</span>
+                    </div>
+                </div>
+                <div class="exercise-card" data-group="omuz">
+                    <div class="card-badge">Omuz</div>
+                    <h3>Face Pull</h3>
+                    <p>Arka omuz ve rotator cuff kaslarını çalıştırır. Kablo makinesiyle yapılır.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>3</strong> Set</span>
+                        <span class="meta-item"><strong>15-20</strong> Tekrar</span>
+                        <span class="difficulty easy">Kolay</span>
+                    </div>
+                </div>
+
+                <!-- BACAK -->
+                <div class="exercise-card" data-group="bacak">
+                    <div class="card-badge">Bacak</div>
+                    <h3>Squat (Çömelme)</h3>
+                    <p>Bacak kaslarının kralı. Quadriceps, hamstring ve gluteus kaslarını birlikte çalıştırır.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>4</strong> Set</span>
+                        <span class="meta-item"><strong>6-10</strong> Tekrar</span>
+                        <span class="difficulty hard">Zor</span>
+                    </div>
+                </div>
+                <div class="exercise-card" data-group="bacak">
+                    <div class="card-badge">Bacak</div>
+                    <h3>Leg Press</h3>
+                    <p>Bacak kaslarını güvenli bir şekilde çalıştıran makine hareketi. Yüksek ağırlık kaldırılabilir.
+                    </p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>4</strong> Set</span>
+                        <span class="meta-item"><strong>10-12</strong> Tekrar</span>
+                        <span class="difficulty medium">Orta</span>
+                    </div>
+                </div>
+                <div class="exercise-card" data-group="bacak">
+                    <div class="card-badge">Bacak</div>
+                    <h3>Romanian Deadlift</h3>
+                    <p>Hamstring ve gluteus kaslarını hedefler. Diz hafif bükük, kalçadan eğilerek yapılır.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>3</strong> Set</span>
+                        <span class="meta-item"><strong>10-12</strong> Tekrar</span>
+                        <span class="difficulty medium">Orta</span>
+                    </div>
+                </div>
+                <div class="exercise-card" data-group="bacak">
+                    <div class="card-badge">Bacak</div>
+                    <h3>Calf Raise (Baldır)</h3>
+                    <p>Baldır kaslarını izole eden hareket. Ayakta veya oturarak yapılabilir.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>4</strong> Set</span>
+                        <span class="meta-item"><strong>15-20</strong> Tekrar</span>
+                        <span class="difficulty easy">Kolay</span>
+                    </div>
+                </div>
+
+                <!-- KOL -->
+                <div class="exercise-card" data-group="kol">
+                    <div class="card-badge">Kol</div>
+                    <h3>Barbell Curl</h3>
+                    <p>Biceps kaslarının temel hareketi. Barbell ile pazu bükme hareketi yapılır.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>3</strong> Set</span>
+                        <span class="meta-item"><strong>10-12</strong> Tekrar</span>
+                        <span class="difficulty easy">Kolay</span>
+                    </div>
+                </div>
+                <div class="exercise-card" data-group="kol">
+                    <div class="card-badge">Kol</div>
+                    <h3>Skull Crusher</h3>
+                    <p>Triceps kaslarını izole eden etkili bir hareket. Düz bankta EZ bar ile yapılır.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>3</strong> Set</span>
+                        <span class="meta-item"><strong>10-12</strong> Tekrar</span>
+                        <span class="difficulty medium">Orta</span>
+                    </div>
+                </div>
+                <div class="exercise-card" data-group="kol">
+                    <div class="card-badge">Kol</div>
+                    <h3>Hammer Curl</h3>
+                    <p>Biceps ve ön kol kaslarını çalıştırır. Nötr tutuşla dumbbell ile yapılır.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>3</strong> Set</span>
+                        <span class="meta-item"><strong>12-15</strong> Tekrar</span>
+                        <span class="difficulty easy">Kolay</span>
+                    </div>
+                </div>
+                <div class="exercise-card" data-group="kol">
+                    <div class="card-badge">Kol</div>
+                    <h3>Tricep Pushdown</h3>
+                    <p>Kablo makinesiyle triceps izolasyonu. Düz veya halat eklentiyle yapılır.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>3</strong> Set</span>
+                        <span class="meta-item"><strong>12-15</strong> Tekrar</span>
+                        <span class="difficulty easy">Kolay</span>
+                    </div>
+                </div>
+
+                <!-- KARIN -->
+                <div class="exercise-card" data-group="karin">
+                    <div class="card-badge">Karın</div>
+                    <h3>Plank</h3>
+                    <p>Core stabilitesi için en temel hareket. Belirli süre boyunca pozisyon korunur.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>3</strong> Set</span>
+                        <span class="meta-item"><strong>45-60</strong> Saniye</span>
+                        <span class="difficulty easy">Kolay</span>
+                    </div>
+                </div>
+                <div class="exercise-card" data-group="karin">
+                    <div class="card-badge">Karın</div>
+                    <h3>Hanging Leg Raise</h3>
+                    <p>Alt karın kaslarını yoğun şekilde çalıştırır. Barfikse asılarak bacakları yukarı kaldırma.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>3</strong> Set</span>
+                        <span class="meta-item"><strong>10-15</strong> Tekrar</span>
+                        <span class="difficulty hard">Zor</span>
+                    </div>
+                </div>
+                <div class="exercise-card" data-group="karin">
+                    <div class="card-badge">Karın</div>
+                    <h3>Cable Crunch</h3>
+                    <p>Kablo makinesiyle ağırlıklı karın hareketi. Üst karın kaslarını hedefler.</p>
+                    <div class="card-meta">
+                        <span class="meta-item"><strong>3</strong> Set</span>
+                        <span class="meta-item"><strong>15-20</strong> Tekrar</span>
+                        <span class="difficulty medium">Orta</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== BESLENME ÖNERİLERİ ========== -->
+        <section id="beslenme" class="section-container">
+            <div class="section-header fade-in">
+                <h2>Beslenme Önerileri</h2>
+                <p class="section-desc">Hedefine uygun beslenme planını seç ve önerilen besinleri keşfet.</p>
+            </div>
+
+            <!-- Beslenme Tabları -->
+            <div class="nutrition-tabs fade-in">
+                <button class="tab-btn active" data-tab="bulk">🔥 Bulk (Kas Yapımı)</button>
+                <button class="tab-btn" data-tab="cut">✂️ Cut (Yağ Yakımı)</button>
+                <button class="tab-btn" data-tab="saglik">🌿 Genel Sağlık</button>
+            </div>
+
+            <!-- BULK İçeriği -->
+            <div class="tab-content active" id="tab-bulk">
+                <div class="nutrition-info fade-in">
+                    <div class="info-badge">📌 Bulk Döneminde Dikkat</div>
+                    <p>Kalori fazlası oluşturarak kas kütlesi artırmayı hedefle. Günlük +300-500 kalori fazlası ideal.
+                        Protein alımını kg başına 1.6-2.2g tut.</p>
+                </div>
+                <div class="food-grid fade-in">
+                    <div class="food-card">
+                        <div class="food-emoji">🍗</div>
+                        <h4>Tavuk Göğsü</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>165</strong> kcal</span>
+                            <span class="macro protein"><strong>31g</strong> Protein</span>
+                            <span class="macro"><strong>0g</strong> Karb</span>
+                            <span class="macro"><strong>3.6g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100g porsiyon • Yüksek protein, düşük yağ</p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-emoji">🥚</div>
+                        <h4>Yumurta (Bütün)</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>155</strong> kcal</span>
+                            <span class="macro protein"><strong>13g</strong> Protein</span>
+                            <span class="macro"><strong>1.1g</strong> Karb</span>
+                            <span class="macro"><strong>11g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100g (yaklaşık 2 adet) • Doğal protein kaynağı</p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-emoji">🥩</div>
+                        <h4>Dana Kıyma (%90)</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>176</strong> kcal</span>
+                            <span class="macro protein"><strong>20g</strong> Protein</span>
+                            <span class="macro"><strong>0g</strong> Karb</span>
+                            <span class="macro"><strong>10g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100g porsiyon • Kreatin kaynağı</p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-emoji">🍚</div>
+                        <h4>Pirinç (Pişmiş)</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>130</strong> kcal</span>
+                            <span class="macro protein"><strong>2.7g</strong> Protein</span>
+                            <span class="macro"><strong>28g</strong> Karb</span>
+                            <span class="macro"><strong>0.3g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100g porsiyon • Temel enerji kaynağı</p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-emoji">🥜</div>
+                        <h4>Fıstık Ezmesi</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>588</strong> kcal</span>
+                            <span class="macro protein"><strong>25g</strong> Protein</span>
+                            <span class="macro"><strong>20g</strong> Karb</span>
+                            <span class="macro"><strong>50g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100g porsiyon • Yoğun kalori kaynağı</p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-emoji">🍌</div>
+                        <h4>Muz</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>89</strong> kcal</span>
+                            <span class="macro protein"><strong>1.1g</strong> Protein</span>
+                            <span class="macro"><strong>23g</strong> Karb</span>
+                            <span class="macro"><strong>0.3g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100g porsiyon • Antrenman öncesi ideal</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CUT İçeriği -->
+            <div class="tab-content" id="tab-cut">
+                <div class="nutrition-info fade-in">
+                    <div class="info-badge">📌 Cut Döneminde Dikkat</div>
+                    <p>Kalori açığı oluşturarak yağ yakımını hedefle. Günlük -300-500 kalori açığı ideal. Kas kaybını
+                        önlemek için protein yüksek tut (kg başına 2-2.5g).</p>
+                </div>
+                <div class="food-grid fade-in">
+                    <div class="food-card">
+                        <div class="food-emoji">🐟</div>
+                        <h4>Somon</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>208</strong> kcal</span>
+                            <span class="macro protein"><strong>20g</strong> Protein</span>
+                            <span class="macro"><strong>0g</strong> Karb</span>
+                            <span class="macro"><strong>13g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100g porsiyon • Omega-3 zengini</p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-emoji">🥦</div>
+                        <h4>Brokoli</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>34</strong> kcal</span>
+                            <span class="macro protein"><strong>2.8g</strong> Protein</span>
+                            <span class="macro"><strong>7g</strong> Karb</span>
+                            <span class="macro"><strong>0.4g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100g porsiyon • Düşük kalorili, tok tutar</p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-emoji">🥒</div>
+                        <h4>Salatalık</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>15</strong> kcal</span>
+                            <span class="macro protein"><strong>0.7g</strong> Protein</span>
+                            <span class="macro"><strong>3.6g</strong> Karb</span>
+                            <span class="macro"><strong>0.1g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100g porsiyon • Su oranı yüksek</p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-emoji">🍳</div>
+                        <h4>Yumurta Beyazı</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>52</strong> kcal</span>
+                            <span class="macro protein"><strong>11g</strong> Protein</span>
+                            <span class="macro"><strong>0.7g</strong> Karb</span>
+                            <span class="macro"><strong>0.2g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100g porsiyon • Saf protein</p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-emoji">🫘</div>
+                        <h4>Mercimek</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>116</strong> kcal</span>
+                            <span class="macro protein"><strong>9g</strong> Protein</span>
+                            <span class="macro"><strong>20g</strong> Karb</span>
+                            <span class="macro"><strong>0.4g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100g (pişmiş) • Lif bakımından zengin</p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-emoji">🥗</div>
+                        <h4>Yeşil Salata</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>20</strong> kcal</span>
+                            <span class="macro protein"><strong>1.5g</strong> Protein</span>
+                            <span class="macro"><strong>3.3g</strong> Karb</span>
+                            <span class="macro"><strong>0.2g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100g porsiyon • Hacimli, düşük kalori</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GENEL SAĞLIK İçeriği -->
+            <div class="tab-content" id="tab-saglik">
+                <div class="nutrition-info fade-in">
+                    <div class="info-badge">📌 Dengeli Beslenme</div>
+                    <p>Sağlıklı yaşam için dengeli ve çeşitli beslenme. Tüm makro ve mikro besinleri yeterli miktarda
+                        al. İşlenmiş gıdalardan uzak dur.</p>
+                </div>
+                <div class="food-grid fade-in">
+                    <div class="food-card">
+                        <div class="food-emoji">🥑</div>
+                        <h4>Avokado</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>160</strong> kcal</span>
+                            <span class="macro protein"><strong>2g</strong> Protein</span>
+                            <span class="macro"><strong>9g</strong> Karb</span>
+                            <span class="macro"><strong>15g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100g porsiyon • Sağlıklı yağ kaynağı</p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-emoji">🫐</div>
+                        <h4>Yaban Mersini</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>57</strong> kcal</span>
+                            <span class="macro protein"><strong>0.7g</strong> Protein</span>
+                            <span class="macro"><strong>14g</strong> Karb</span>
+                            <span class="macro"><strong>0.3g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100g porsiyon • Antioksidan deposu</p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-emoji">🥣</div>
+                        <h4>Yulaf Ezmesi</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>389</strong> kcal</span>
+                            <span class="macro protein"><strong>17g</strong> Protein</span>
+                            <span class="macro"><strong>66g</strong> Karb</span>
+                            <span class="macro"><strong>7g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100g (kuru) • Yavaş salınımlı karbonhidrat</p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-emoji">🐠</div>
+                        <h4>Ton Balığı</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>132</strong> kcal</span>
+                            <span class="macro protein"><strong>28g</strong> Protein</span>
+                            <span class="macro"><strong>0g</strong> Karb</span>
+                            <span class="macro"><strong>1.3g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100g porsiyon • Yüksek protein, düşük yağ</p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-emoji">🥛</div>
+                        <h4>Süt (Yarım Yağlı)</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>50</strong> kcal</span>
+                            <span class="macro protein"><strong>3.4g</strong> Protein</span>
+                            <span class="macro"><strong>5g</strong> Karb</span>
+                            <span class="macro"><strong>1.8g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100ml porsiyon • Kalsiyum kaynağı</p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-emoji">🍠</div>
+                        <h4>Tatlı Patates</h4>
+                        <div class="food-macros">
+                            <span class="macro"><strong>86</strong> kcal</span>
+                            <span class="macro protein"><strong>1.6g</strong> Protein</span>
+                            <span class="macro"><strong>20g</strong> Karb</span>
+                            <span class="macro"><strong>0.1g</strong> Yağ</span>
+                        </div>
+                        <p class="food-note">100g porsiyon • Kompleks karbonhidrat</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== GÜNLÜK BESLENME PLANI ========== -->
+        <section id="gunluk-plan" class="section-container">
+            <div class="section-header fade-in">
+                <h2>Günlük Beslenme Planı</h2>
+                <p class="section-desc">Fitness hedefine uygun örnek günlük beslenme programı.</p>
+            </div>
+
+            <div class="meal-plan fade-in">
+                <div class="meal-card">
+                    <div class="meal-time">
+                        <span class="meal-icon">🌅</span>
+                        <span>07:00</span>
+                    </div>
+                    <h3>Kahvaltı</h3>
+                    <ul>
+                        <li>3 yumurta (çırpılmış veya haşlanmış)</li>
+                        <li>1 kase yulaf ezmesi + bal + muz</li>
+                        <li>1 dilim tam buğday ekmek</li>
+                        <li>1 bardak süt</li>
+                    </ul>
+                    <div class="meal-total">~650 kcal • 35g protein</div>
+                </div>
+
+                <div class="meal-card">
+                    <div class="meal-time">
+                        <span class="meal-icon">🥤</span>
+                        <span>10:00</span>
+                    </div>
+                    <h3>Ara Öğün</h3>
+                    <ul>
+                        <li>1 scoop whey protein + su</li>
+                        <li>1 avuç badem</li>
+                        <li>1 muz</li>
+                    </ul>
+                    <div class="meal-total">~350 kcal • 30g protein</div>
+                </div>
+
+                <div class="meal-card">
+                    <div class="meal-time">
+                        <span class="meal-icon">☀️</span>
+                        <span>13:00</span>
+                    </div>
+                    <h3>Öğle Yemeği</h3>
+                    <ul>
+                        <li>200g tavuk göğsü (ızgara)</li>
+                        <li>1 porsiyon pirinç pilav</li>
+                        <li>Bol yeşil salata + zeytinyağı</li>
+                        <li>1 bardak ayran</li>
+                    </ul>
+                    <div class="meal-total">~700 kcal • 50g protein</div>
+                </div>
+
+                <div class="meal-card">
+                    <div class="meal-time">
+                        <span class="meal-icon">🍎</span>
+                        <span>16:00</span>
+                    </div>
+                    <h3>Antrenman Öncesi</h3>
+                    <ul>
+                        <li>2 dilim tam buğday ekmek + fıstık ezmesi</li>
+                        <li>1 muz</li>
+                        <li>1 fincan kahve (opsiyonel)</li>
+                    </ul>
+                    <div class="meal-total">~400 kcal • 15g protein</div>
+                </div>
+
+                <div class="meal-card">
+                    <div class="meal-time">
+                        <span class="meal-icon">🌙</span>
+                        <span>19:30</span>
+                    </div>
+                    <h3>Akşam Yemeği</h3>
+                    <ul>
+                        <li>200g somon veya kırmızı et</li>
+                        <li>Fırınlanmış tatlı patates</li>
+                        <li>Buharda brokoli + havuç</li>
+                        <li>1 kase yoğurt</li>
+                    </ul>
+                    <div class="meal-total">~750 kcal • 45g protein</div>
+                </div>
+
+                <div class="meal-card">
+                    <div class="meal-time">
+                        <span class="meal-icon">🌜</span>
+                        <span>22:00</span>
+                    </div>
+                    <h3>Gece Atıştırması</h3>
+                    <ul>
+                        <li>1 kase quark/süzme peynir</li>
+                        <li>1 tatlı kaşığı bal</li>
+                        <li>Bir avuç ceviz</li>
+                    </ul>
+                    <div class="meal-total">~300 kcal • 25g protein</div>
+                </div>
+            </div>
+
+            <div class="daily-total fade-in">
+                <h3>Günlük Toplam</h3>
+                <div class="total-macros">
+                    <div class="total-item">
+                        <span class="total-number">~3150</span>
+                        <span class="total-label">Kalori</span>
+                    </div>
+                    <div class="total-item">
+                        <span class="total-number">~200g</span>
+                        <span class="total-label">Protein</span>
+                    </div>
+                    <div class="total-item">
+                        <span class="total-number">~350g</span>
+                        <span class="total-label">Karbonhidrat</span>
+                    </div>
+                    <div class="total-item">
+                        <span class="total-number">~90g</span>
+                        <span class="total-label">Yağ</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== HAKKIMIZDA ========== -->
+        <section id="hakkimizda" class="section-container about-section">
+            <div class="section-header fade-in">
+                <h2>Hakkımızda</h2>
+            </div>
+            <div class="about-content fade-in">
+                <div class="about-text">
+                    <h3>FitLife Nedir?</h3>
+                    <p>FitLife, fitness yolculuğunda size rehberlik etmek için tasarlanmış bir platformdur. Bilimsel
+                        verilere dayalı egzersiz hareketleri, beslenme önerileri ve diyet planları sunuyoruz.</p>
+                    <p>Amacımız, herkesin sağlıklı ve güçlü bir yaşam sürmesine yardımcı olmak. İster yeni başlayan
+                        ister deneyimli bir sporcu olun, FitLife sizin için doğru kaynağı sunar.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <span>✅</span> Bilimsel temelli egzersiz programları
+                        </div>
+                        <div class="feature">
+                            <span>✅</span> Detaylı besin değerleri ve makro bilgileri
+                        </div>
+                        <div class="feature">
+                            <span>✅</span> Bulk, Cut ve sağlıklı beslenme planları
+                        </div>
+                        <div class="feature">
+                            <span>✅</span> Kas grubuna özel hareket rehberi
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Fit<span>Life</span></div>
+            <p>Sağlıklı yaşam, doğru adımlarla başlar.</p>
+            <div class="footer-links">
+                <a href="#hareketler">Hareketler</a>
+                <a href="#beslenme">Beslenme</a>
+                <a href="#gunluk-plan">Günlük Plan</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FitLife. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
